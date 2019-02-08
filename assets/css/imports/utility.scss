@@ -1,0 +1,17 @@
+@import "theme/variables";
+
+.break-s {
+  @media screen and (max-width: $break-small) {
+    width: 100% !important;
+  }
+}
+.break-m {
+  @media screen and (max-width: $break-medium) {
+    width: 100% !important;
+  }
+}
+.break-l {
+  @media screen and (max-width: $break-large) {
+    width: 100% !important;
+  }
+}

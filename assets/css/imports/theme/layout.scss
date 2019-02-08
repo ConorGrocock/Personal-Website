@@ -1,0 +1,85 @@
+@import "colors";
+@import "variables";
+
+#header{
+	width: 100%;
+	background: $nav-background;
+	color: $text-color;
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+  align-items: center;
+
+
+	.brand{
+		order: 0;
+		max-width: 50%;
+
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.navigation {
+		order: 1;
+	}
+	.social_links {
+		order: 2;
+	}
+
+
+	@media screen and (max-width: $break-small) {
+		flex-wrap: wrap;
+
+			.navigation {
+				width: 100%;
+				order: 2;
+			}
+			.social_links {
+				order: 1;
+			}
+	}
+	margin-bottom: 10px;
+}
+
+.nav_items {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+
+	list-style: none;
+	text-decoration: none;
+
+	.nav_item {
+		padding: 20px;
+
+		a {
+			color: $link-color;
+			text-decoration: none;
+			&:hover {
+				color: lighten($link-color, 5%);
+			}
+		}
+	}
+}
+
+.content {
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	background: $content-background;
+	//box-shadow: 12px 0 15px -4px $background-shadow-color, -12px 0 8px -4px $background-shadow-color;
+
+
+	.title {
+		display: block;
+		font-size: 2em;
+		width: 100%;
+		text-align: center;
+	}
+}

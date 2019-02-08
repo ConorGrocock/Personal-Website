@@ -1,0 +1,74 @@
+.work_examples {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .example {
+    min-width: 300px;
+    width: 33%;
+
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &:hover {
+      .details {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    .details {
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.25s linear;
+      position: absolute;
+      top: 0;
+      left: 5%;
+      z-index: 1;
+      width: 90%;
+      text-align: center;
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      color: black;
+      -webkit-text-fill-color: white;
+      /* Will override color (regardless of order) */
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: grey;
+
+      .title {
+        width: 100%;
+      }
+
+      p {
+        font-size: 1.5em;
+      }
+
+      .description {
+        width: 100%;
+        flex-grow: 1;
+      }
+
+      .platform {
+        width: 100%;
+      }
+    }
+
+    .development {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      padding: 10px;
+      background: orange;
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,119 @@
+@import "imports/theme/colors";
+@import "imports/theme/variables";
+
+.contact-form{
+  width: 40%;
+
+  @media screen and (max-width: $break-medium) {
+    width: 100%;
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+
+    .field {
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      &.submit {
+        justify-content: space-around;
+        input[type="submit"] {
+          width: auto;
+          appearance: none;
+          padding: 10px 20px 10px;
+          border-radius: 5px;
+        }
+      }
+
+      label {
+        vertical-align: middle;
+      }
+
+      input {
+        width: 50%;
+        &[type="text"] {
+          padding: .5%;
+          border-radius: 5px;
+          border: 2px solid darken($content-background, 5%);
+        }
+      }
+
+      textarea {
+        margin-top: 10px;
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 2px solid darken($content-background, 5%);
+      }
+    }
+  }
+}
+
+.contact-infomation {
+  width: 30%;
+  @media screen and (max-width: $break-medium) {
+    width: 100%;
+  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .item {
+    width: 100%;
+
+      @media screen and (max-width: $break-medium) {
+        width: 20%;
+      }
+
+    background: darken($content-background, 5%);
+
+    padding: 10px;
+    margin: 20px;
+
+    text-align: center;
+
+    .title {
+      width: 100%;
+      font-size: 1.2em;
+      padding-bottom: 10px;
+    }
+
+    a.contact-content {
+    }
+
+    & .social_links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      a {
+        color: slategrey;
+        margin: 5%;
+        font-size: 2em;
+
+        &:visited {
+          color: inherit;
+        }
+
+        img {
+          width: 32px;
+
+          filter: none;
+          filter: grayscale(1);
+          -webkit-transition: all .8s ease-in-out;
+
+          &:hover {
+            filter: none;
+            filter: grayscale(0);
+            -webkit-transform: scale(1.3);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.content {
+  display: flex;
+  justify-content: space-between;
+
+  .education {
+    width: 40%;
+  }
+
+  #college {
+    .institution {
+      font-size: 1.4em;
+    }
+    .qualification {
+      display: flex;
+      justify-content: space-between;
+
+      .subject {
+        width: 60%;
+      }
+      .grade {
+        width: 20%;
+      }
+    }
+  }
+
+  #university {
+    .institution {
+      font-size: 1.4em;
+    }
+    .course {
+      .course-name {
+        font-size: 1.2em;
+      }
+
+      .modules {
+        display: block;
+        position: absolute;
+        overflow: hidden;
+        max-height:0;
+        width: 100%;
+        transition: max-height 0.7s ease-in;
+      }
+
+      &:hover #university-modules-list {
+          max-height: 500px;
+      }
+    }
+  }
+}
